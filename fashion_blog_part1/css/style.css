@@ -1,0 +1,33 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 40px;
+  padding: 20px;
+  background: #FFFFFF;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.4;
+  font-family: Lato, sans-serif;
+}
+
+h1 a{
+  font-family: Lato, sans-serif;
+  font-size: 60px;
+  text-decoration: none;
+  color: #DD432D;
+}
+
+h2 {
+  font-size: 40;
+  padding-bottom: 20px;
+}
+
+h3 {
+  color: rgb(204,204,204);
+}
+
+nav {
+  color: #CCCCCC;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
