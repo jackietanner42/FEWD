@@ -1,0 +1,47 @@
+body {
+  color: #020202;
+  background: #CFD7D7;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, blockquote {
+  padding-top: 20px;
+  font-family: 'Helvetica', sans-serif;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 24px;
+}
+
+#container {
+  width:60%;
+  height:auto;
+  position:relative;
+  left:20%;
+}
+
+header {
+  padding-top:40px;
+  padding-bottom: 40px;
+  text-align: center;
+  background: #0FA3B1;
+}
+
+section div {
+  text-align: center;
+}
+
+.button {
+  display: block;
+  color: #FFFFFF;
+  font-weight: bold;
+  background: #FE5F55;
+  padding: 8px;
+  text-decoration: none;
+}
