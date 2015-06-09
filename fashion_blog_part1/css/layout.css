@@ -1,0 +1,15 @@
+.heading {
+  position:absolute;
+  float: left;
+}
+
+.preview {
+  background: url(../Fashion_Blog_part2.png);
+  background-repeat: no-repeat;
+}
+
+.nav {
+  position: relative;
+  float:left;
+  clear:both;
+}
