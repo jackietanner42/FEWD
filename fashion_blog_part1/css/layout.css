@@ -8,8 +8,11 @@
   background-repeat: no-repeat;
 }
 
-.nav {
+section nav{
   position: relative;
   float:left;
-  clear:both;
+  background:black;
+  color:white;
+  border-right: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
 }
