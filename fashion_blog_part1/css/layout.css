@@ -8,11 +8,10 @@
   background-repeat: no-repeat;
 }
 
-section nav{
-  position: relative;
-  float:left;
-  background:black;
-  color:white;
-  border-right: 1px solid #FFFFFF;
-  border-left: 1px solid #FFFFFF;
+section .button {
+  diplay: block;
+  color: white;
+  background: black;
+  width: 400px;
+  text-decoration: none;
 }
