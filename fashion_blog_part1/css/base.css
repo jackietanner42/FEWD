@@ -1,4 +1,4 @@
-body {
+/*body {
   width: 100%;
   height: 100%;
   margin: 40px;
@@ -9,8 +9,22 @@ body {
   line-height: 1.4;
   font-family: Lato, sans-serif;
   text-decoration: none;
+}*/
+
+body {
+  color: black;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
+#heading {
+  position: absolute;
+  height: auto;
+  font-size: 21px;
+}
 header h2{
   position: relative;
   color: #7F7F7F;
@@ -18,12 +32,12 @@ header h2{
   text-decoration: none;
 }
 
-h1 a{
+/*h1 a{
   font-family: Lato, sans-serif;
   font-size: 60px;
   text-decoration: none;
   color: #DD432D;
-}
+}*/
 
 h2 {
   font-size: 30px;

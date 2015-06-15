@@ -1,17 +1,18 @@
-.heading {
+/*.heading {
   position:absolute;
   float: left;
-}
+}*/
 
 .preview {
   background: url(../Fashion_Blog_part2.png);
   background-repeat: no-repeat;
 }
 
-section .button {
-  diplay: block;
+
+/*nav .button {
+  display: block;
   color: white;
   background: black;
   width: 400px;
   text-decoration: none;
-}
+}*/

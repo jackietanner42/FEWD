@@ -3,3 +3,98 @@
 @import url('reset.css');
 @import url('base.css');
 @import url('layout.css');
+
+#container {
+  position: absolute;
+  height: auto;
+  font-size: 20px;
+}
+
+article p::first-letter {
+  font-weight: 300;
+  color:#cccccc;
+  font-size:88px;
+  padding:10px;
+  float: left;
+  line-height: 60px;
+  padding-top:4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+ article h4 a{
+   color: #DD412D;
+   text-decoration: none:
+ }
+nav a {
+  color: white;
+  width: 400px;
+  text-decoration: none;
+  border: 1px solid;
+  margin: -2px;
+  padding: 20px;
+  font-weight: 400;
+}
+
+nav {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  background-color: black;
+  width:1078px;
+}
+
+aside {
+  float:right;
+  width: 300px;
+  height:1200px;
+  padding-top: 130px;
+  color: #cccccc;
+}
+ aside h5 {
+   color: #aaaaaa;
+   padding-bottom: 30px;
+   font-size: 20px;
+ }
+
+ aside h6 {
+   color: #DD412D;
+   float: right;
+ }
+
+ aside li{
+   color: #DD412D;
+ }
+
+aside p {
+  padding-bottom: 20px;
+}
+
+.adimg {
+  margin-top: 30px;
+  width:300px;
+  height:250px;
+  background: #eeeeee;
+  marging-left:4px;
+  margin-bottom: 30px;
+}
+
+.adimg p {
+  text-align: center;
+  padding-top: 120px;
+  font-size: 55px;
+  font-weight:700;
+  color: #bbbbbb;
+}
+.heading li{
+  display: inline-block;
+}
+
+.heading li h2 {
+  padding-left: 25px;
+  color:#939393;
+}
+
+.heading h1{
+  color: #DD432D;
+  font-size:60px;
+  font-weight: 100;
+}
