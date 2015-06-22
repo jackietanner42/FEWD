@@ -1,0 +1,16 @@
+#hamburger {
+  float: left;
+  color: #FFFFFF;
+  background-color: #000000;
+  /*background: url('../../img/hamburger.svg')*/
+  border: 1px solid white;
+  height: 768px;
+  width: 25%;
+  z-index: 10000;
+  position: absolute;
+}
+
+.menu {
+  float:left;
+  background: url('../../img/hamburger.svg') 
+}
