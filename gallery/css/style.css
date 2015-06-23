@@ -9,8 +9,17 @@ Developer @GA in NYC
 
 
 @import 'base/base.css';
-@import 'comp/slider.css';
+
+/******************************************
+/* LAYOUT
+/*******************************************/
 @import 'comp/nav.css';
+@import 'comp/slider.css';
+@import 'comp/gallery.css';
+@import 'comp/single-photo.css';
+@import 'comp/search.css';
+@import 'comp/contact.css';
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/

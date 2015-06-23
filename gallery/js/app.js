@@ -1,5 +1,5 @@
 var sliderElement = document.getElementById('slider');
-sliderElement.slider();
+sliderElement.Slider();
 
 var navElement = document.getElementById('nav');
 navElement.Nav();
