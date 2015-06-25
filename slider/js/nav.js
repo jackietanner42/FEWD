@@ -1,6 +1,5 @@
 Element.prototype.Nav = function(){
-
-  var nav = this,
+  var nav = this;
       btn = document.createElement('div'),
       container = document.getElementById('container');
 
