@@ -2,10 +2,12 @@
 Element.prototype.Gallery = function(){
   var gallery = this;
   var ul = gallery.children[0];
-  var photos = {};
+  var photos = new Object();
   var container = document.getElementById('container');
   // Define global variables
-  this.singlePhoto = function (ev){
+
+  this.singlePhoto = function(ev) {
+
 
     var section = document.createElement('section');
 
@@ -16,8 +18,6 @@ Element.prototype.Gallery = function(){
     // section.style.backgroundRepeat = 'no-repeat';
     // section.style.backgroundSize = 'contain';
     // section.style.backgroundPosition = 'center center';
-    // section.style.height = '100%';
-    // container.appendChild(section);
     var p = document.createElement('p');
     p.innerHTML = ev.target.dataset.description;
 
@@ -25,12 +25,13 @@ Element.prototype.Gallery = function(){
     closeButton.classList.add('close');
 
     closeButton.addEventListener('click',function(){
-      section.style.display = 'none';
+        section.style.display = 'none';
     });
 
     section.children[0].appendChild(p);
     section.appendChild(closeButton);
     container.appendChild(section);
+
 
   };
 
@@ -40,24 +41,24 @@ Element.prototype.Gallery = function(){
       photos.forEach(function(photo,index){
 
 
-        var li = document.createElement('li');
+          var li = document.createElement('li');
 
-        li.style.backgroundImage = 'url("'+photo.image_url+'")';
-        li.style.backgroundSize = 'cover';
+          li.style.backgroundImage = 'url("'+photo.image_url+'")';
+          li.style.backgroundSize = 'cover';
 
-        li.innerHTML = '<div class="meta"><h5>'+
-            photo.name+
-            '</h5><h6>'+
-            photo.user.fullname+
-            '</h6></div><div class="stats"><div>'+
-            photo.rating+'</div></div>'+
-            '</div>';
+          li.innerHTML = '<div class="meta"><h5>'+
+                photo.name+
+                '</h5><h6>'+
+                photo.user.fullname+
+                '</h6></div><div class="stats"><div>'+
+                photo.rating+'</div></div>'+
+                '</div>';
 
-        li.dataset.description = photo.description;
+          li.dataset.description = photo.description;
 
-        li.addEventListener('mousedown',gallery.singlePhoto);
+          li.addEventListener('click',gallery.singlePhoto);
 
-        ul.appendChild(li);
+          ul.appendChild(li);
 
 
       });
