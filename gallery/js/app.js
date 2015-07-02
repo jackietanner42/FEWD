@@ -3,7 +3,7 @@ sliderElement.Slider();
 
 var navElement = document.getElementById('nav');
 navElement.Nav();
-navElement.showSection('slider');
+navElement.showSection('gallery');
 
 var galleryElement = document.getElementById('gallery');
 galleryElement.Gallery();
