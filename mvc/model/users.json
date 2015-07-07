@@ -1,0 +1,37 @@
+{
+  "users":[{
+    "name": "Jackie",
+    "age": "30",
+    "occupation": "Being Awesome"
+    },
+    {
+      "name": "Dianna",
+      "age": "30",
+      "occupation": "Massage Therapist"
+    },
+    {
+      "name": "Vanessa",
+      "age": "30",
+      "occupation": "English Teacher"
+    },
+    {
+      "name": "Tati",
+      "age": "35",
+      "occupation": "History Teacher"
+    },
+    {
+      "name": "Katy",
+      "age": "30",
+      "occupation": "Property Manager"
+    },
+    {
+      "name": "Amanda",
+      "age": "31",
+      "occupation": "Marketing Manager"
+    },
+    {
+      "name": "Cristina",
+      "age": "29",
+      "occupation": "Union Rep"
+    }]
+}
