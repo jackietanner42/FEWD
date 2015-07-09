@@ -1,0 +1,44 @@
+/*.cards {
+  width: 80%;
+  margin: auto;
+}*/
+
+.back{
+position: absolute;
+top: 60px;
+left: 50%;
+width: 66.66666666667%;
+height: auto;
+margin-left: -33.33333333333%;
+/*perspective: 500px;
+transform-style: preserve-3d;*/
+}
+
+.back li{
+  padding: 10px;
+  float: left;
+  position: relative;
+  width: 16.66%;
+}
+
+.back ul li img{
+  background:#003E1F;
+  width: 80%%;
+  border-radius: 8%;
+  /*height: 80%;*/
+}
+
+.front{
+position: absolute;
+top: 60px;
+left: 50%;
+width: 66.66666666667%;
+height: auto;
+margin-left: -33.33333333333%;
+/*perspective: 500px;
+transform-style: preserve-3d;*/
+}
+
+.front li{
+
+}
