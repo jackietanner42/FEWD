@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<!--http://www.sitepoint.com/forums/showthread.php?991431-Java-Script-Challenge-A-Game-of-Memory-->
+    <title>Memory</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    	<script src="js/app.js"></script>
+    <style>
+      .card{
+        width:65px;
+        height:100px;
+        float:left;
+        margin:5px;
+        color:blue;
+        padding:5px;
+        border:solid 1px blue;
+				text-indent:9999px;
+      }
+
+      #Playfield{
+        width: 600px;
+      }
+
+      .down{
+        background:blue;
+      }
+
+      .clear{
+        clear:both;
+      }
+
+      p {
+        margin:0;
+        padding: 5px 15px 0 5px;
+      }
+
+			#playerInfo{
+				padding:15px 0 35px 0;
+			}
+
+      #player1 p, #player2 p{
+        float:left;
+      }
+
+      .active{
+        background: yellow;
+      }
+
+			.up, .matched{
+				text-indent:0px;
+			}
+    </style>
+  </head>
+
+  <body>
+    <div id="Playfield">
+      <div class="card down one" data-face="1"></div>
+      <div class="card down two" data-face="2"></div>
+      <div class="card down three" data-face="3"></div>
+      <div class="card down four" data-face="4"></div>
+      <div class="card down five" data-face="5"></div>
+      <div class="card down six" data-face="6"></div>
+      <div class="card down seven" data-face="7"></div>
+      <div class="card down eight" data-face="8"></div>
+      <div class="card down nine" data-face="9"></div>
+      <div class="card down ten" data-face="10"></div>
+      <div class="card down eleven" data-face="11"></div>
+      <div class="card down twelve" data-face="12"></div>
+      <div class="card down one" data-face="1"></div>
+      <div class="card down two" data-face="2"></div>
+      <div class="card down three" data-face="3"></div>
+      <div class="card down four" data-face="4"></div>
+      <div class="card down five" data-face="5"></div>
+      <div class="card down six" data-face="6"></div>
+      <div class="card down seven" data-face="7"></div>
+      <div class="card down eight" data-face="8"></div>
+      <div class="card down nine" data-face="9"></div>
+      <div class="card down ten" data-face="10"></div>
+      <div class="card down eleven" data-face="11"></div>
+      <div class="card down twelve" data-face="12"></div>
+    </div>
+
+    <div id="playerInfo" class="clear">
+      <div id="player1">
+        <p><strong>Player 1:</strong></p>
+        <p>Turns Taken: <span class="noTurns">0</span></p>
+        <p>Pairs matched: <span class="noPairs">0</span></p>
+      </div>
+
+      <div id="player2" class="clear">
+        <p><strong>Player 2:</strong></p>
+        <p>Turns Taken: <span class="noTurns">0</span></p>
+        <p>Pairs matched: <span class="noPairs">0</span></p>
+      </div>
+    </div>
+    <p class="clear"><a href="#" id="reset">Click here to reset game</a></p>
+
+    <script type="text/javascript">
+    function twoCardsFaceUp(){
+      return $(".up").length == 2;
+    }
+
+    function cardsMatch(){
+      return $(".up:eq(0)").text() == $(".up:eq(1)").text();
+    }
+
+    function markCardsAsMatched(){
+      $(".up").each(function(){
+        $(this).addClass("matched").removeClass("up").off("click");
+      });
+    }
+
+    function updateScore(player){
+      var el = $(player).find(".noPairs");
+      var p = Number(el.text());
+      el.text(p+1);
+    }
+
+    function allCardsMatched(){
+      return ($(".matched").length == 24)
+    }
+
+    function flipCardsBackOver(){
+      setTimeout(function(){
+        $(".up").each(function(){
+          $(this).addClass("down").removeClass("up");
+        });
+      }, 1000);
+    }
+
+    function shuffle(cards){
+      // Uses Fisherâ€“Yates shuffle
+      // See http://en.wikipedia.org/wiki/Fisher-Yates_shuffle
+      var i = cards.length, j, tempi, tempj;
+      if ( i == 0 ) return false;
+      while ( --i ) {
+        j = Math.floor( Math.random() * ( i + 1 ) );
+        tempi = cards[i];
+        tempj = cards[j];
+        cards[i] = tempj;
+        cards[j] = tempi;
+      }
+      return cards;
+    }
+
+    function highlightCurrentPlayer(player){
+      $("#playerInfo p").each(function(){
+        if ($(this).hasClass("active")){
+          $(this).removeClass("active");
+        }
+      });
+      $(player).find("p").first().addClass("active");
+    }
+
+    function incrementTurns(player){
+      var el = $(player).find(".noTurns");
+      var t = Number(el.text());
+      el.text(t+1);
+    }
+
+    function updateCurrentPlayer(player){
+      currentPlayer = (currentPlayer.match(/1/))? "#player2" : "#player1"
+    }
+
+    function winner(){
+      var playerOnePoints = Number($("#player1").find(".noPairs").text());
+      var playerTwoPoints = Number($("#player2").find(".noPairs").text());
+      if (playerOnePoints > playerTwoPoints){
+        return "Player one won!";
+      } else if (playerOnePoints < playerTwoPoints){
+        return "Player two won!";
+      } else {
+        return "An honourable draw!";
+      }
+    }
+
+    // Shuffle cards
+    var cards = $(".card");
+    cards.remove();
+    cards = shuffle(cards);
+    cards.appendTo($("#Playfield"));
+
+    // Main Loop
+    $('.card').on("click", function(){
+      if ($(".up").length == 2){
+        return false;
+      }
+
+      $(this).removeClass("down").addClass("up");
+
+      if (twoCardsFaceUp()){
+        incrementTurns(currentPlayer);
+        if (cardsMatch()){
+          markCardsAsMatched();
+          updateScore(currentPlayer);
+          if (allCardsMatched()){
+            alert(winner());
+          }
+        }else{
+          flipCardsBackOver();
+          updateCurrentPlayer(currentPlayer);
+          setTimeout(function(){highlightCurrentPlayer(currentPlayer)}, 1000);
+        }
+      }
+    });
+
+    $("#reset").click(function(){
+      location.reload();
+    });
+
+    $(".card").each(function(){
+      var num = $(this).data("face");
+      $(this).text(num);
+    });
+
+    var currentPlayer = "#player1";
+    highlightCurrentPlayer(currentPlayer);
+
+    </script>
+  </body>
+</html>

@@ -1,92 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-       <meta charset="utf-8">
-       <meta name="description" content="A simple example of how Javascript can manipulate DOM.">
-       <meta name="keywords" content="General Assembly, Javascript, JS">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="A simple example of how Javascript can manipulate DOM.">
+    	<meta name="keywords" content="General Assembly, Javascript, JS">
 
-        <title>Template</title>
+		<title>Template</title>
 
-        <!-- external CSS link -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/cards.css">
+		<!-- external CSS link -->
 
-
-    </head>
-
-
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/header.css"> -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/cards.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	</head>
 
 
-    <body>
 
-        <h1>Card Match</h1>
+	<body>
 
+		<h1>Card Match</h1>
+<div class = 'cardGame'>
+		<section  class="card effect__click">
+				<div class="back">
+							<img src="img/bicycle-back.jpg"></div>
 
-        <div class="back">
-
-            <!-- <section id="cards" class="cards"> -->
-                <ul>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                    <li><img src="img/bicycle-back.jpg"></li>
-                </ul>
-            <!-- </section> -->
-                <!-- //display cards randomly, floated left, probably in a ul//
-                    //http://nnattawat.github.io/flip/
-                //pull individual objects from svg file
-                //onclick, flip over and display its face (css transition)
-                        //trigger function :manual
-                //http://davidwalsh.name/css-flip
-                //on second click, flip another card, keeping first face-up
-                // if (first==second)
-                        //keep both face up until end-game, = match
-                    //else: turn both back face-down
-                //when all cards = match, replace "Card Match" w/ "You Win" -->
-
-
-        </div>
 
 				<div class="front">
+							<img src="img/french-suits.svg"></div>
+		</section>
+</div>
+				<!-- //display cards randomly, floated left, probably in a ul//
+					//http://nnattawat.github.io/flip/
+				//pull individual objects from svg file
+				//onclick, flip over and display its face (css transition)
+						//trigger function :manual
+				//http://davidwalsh.name/css-flip
+				//on second click, flip another card, keeping first face-up
+				// if (first==second)
+						//keep both face up until end-game, = match
+					//else: turn both back face-down
+				//when all cards = match, replace "Card Match" w/ "You Win" -->
 
-            <!-- <section class="cards"> -->
-                <ul id = 'list'>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            <!-- </section> -->
-        </div>
-				<!-- #game -->
-        <script src="js/app.js"></script>
-    </body>
+
+
+		<!-- #game -->
+		<script src="js/app.js"></script>
+	</body>
 </html>

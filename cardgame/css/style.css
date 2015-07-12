@@ -1,0 +1,68 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+<style>
+  .card{
+    width:65px;
+    height:100px;
+    float:left;
+    margin:5px;
+    color:blue;
+    padding:5px;
+    border:solid 1px blue;
+    text-indent:9999px;
+  }
+
+  #Playfield{
+    width: 600px;
+  }
+
+  .down{
+    background:blue;
+  }
+
+  .clear{
+    clear:both;
+  }
+
+  p {
+    margin:0;
+    padding: 5px 15px 0 5px;
+  }
+
+  #playerInfo{
+    padding:15px 0 35px 0;
+  }
+
+  #player1 p, #player2 p{
+    float:left;
+  }
+
+  .active{
+    background: yellow;
+  }
+
+  .up, .matched{
+    text-indent:0px;
+  }
+</style>
