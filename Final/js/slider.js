@@ -1,5 +1,5 @@
 // Define prototypical Slider function
-Element.prototype.slider = function(){
+Element.prototype.Slider = function(){
 
   var slider = this;
   var wrapper = slider.children[0];

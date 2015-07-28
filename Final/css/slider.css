@@ -26,14 +26,14 @@
 }
 .slider .left {
   left: 0;
-  background: url('../../img/arrow-down.svg');
+  background: url('../img/arrow-down.svg');
   -ms-transform: rotate(90deg);/* IE 9 */
   -webkit-transform: rotate(90deg);/* Chrome, Safari, Opera */
   transform: rotate(90deg);
 }
 .slider .right {
   right: 0;
-  background: url('../../img/arrow-down.svg');
+  background: url('../img/arrow-down.svg');
   -ms-transform: rotate(-90deg);/* IE 9 */
   -webkit-transform: rotate(-90deg);/* Chrome, Safari, Opera */
   transform: rotate(-90deg);
