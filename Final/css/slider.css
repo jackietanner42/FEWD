@@ -15,7 +15,7 @@
 }
 .slider ul li img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .slider .left, .slider .right {
   width: 40px;
@@ -37,4 +37,19 @@
   -ms-transform: rotate(-90deg);/* IE 9 */
   -webkit-transform: rotate(-90deg);/* Chrome, Safari, Opera */
   transform: rotate(-90deg);
+}
+
+.page {
+  border-radius: 20px;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.on {
+  background: red;
+}
+
+.off {
+  background: green;
 }
