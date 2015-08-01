@@ -14,6 +14,7 @@ body {
 
 .content {
   margin: 500px 0 0;
+  padding: 20px;
 }
 .description h1 {
   /*color: #333333;*/

@@ -22,6 +22,11 @@ Element.prototype.Slider = function(){
         updateCurrentPage(index);
         position = position + width;
         wrapper.style.marginLeft = position + 'px';
+      } else {
+        index = slides.length - 1;
+        updateCurrentPage(index);
+        position = width * index * -1;
+        wrapper.style.marginLeft = position + 'px';
       }
     });
 
@@ -30,6 +35,11 @@ Element.prototype.Slider = function(){
         index++;
         updateCurrentPage(index);
         position = position - width;
+        wrapper.style.marginLeft = position + 'px';
+      } else {
+        index = 0;
+        updateCurrentPage(index);
+        position = 0;
         wrapper.style.marginLeft = position + 'px';
       }
     });
@@ -59,7 +69,7 @@ Element.prototype.Slider = function(){
     var pages = document.getElementById('pages');
     for(var i = 0; i < pages.children.length; i++){
       var page = pages.children[i];
-      page.className = 'page off';
+        page.className = 'page off';
     }
     pages.children[index].className = 'page on';
   };
@@ -93,7 +103,6 @@ Element.prototype.Slider = function(){
     createButtons();
     createPages();
 
-    // find out how many images there are on the page
     var pages = document.getElementById('pages');
 
     window.addEventListener('resize',slider.resize);
